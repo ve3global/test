@@ -40,3 +40,31 @@
     transform: rotate(360deg);
   }
 }
+
+.myApp{
+  display:flex;
+  flex-direction: column;
+  background-color: #667db6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.advice-container{
+  justify-content:center;
+  align-items: center;
+  border-radius: 10px;
+  background: #C9D6FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.btn{
+  color : white;
+  background-color: rgb(51, 46, 46);
+  border-radius:  20px;
+  margin :10px;
+  margin-bottom: 20px;
+  padding:0.5rem;
+  border: 0px solid ;
+  width: 5rem;
+}

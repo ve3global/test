@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import './App.css'
 export default class App extends Component {
   state = {
     advices: '',
@@ -28,31 +29,30 @@ export default class App extends Component {
   render() {
     const mystyle = {
       width: ' 50%',
-      height: 'auto',
+      height: '30vh',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: 'red',
+    
     }
     const AppStyle = {
+      
       display: "flex",
       alignItems: 'center',
       justifyContent: 'center',
       height: '100vh',
+      
     }
     const { advices } = this.state
     return (
-      <div className="App" style={AppStyle} >
-        <div style={mystyle} >
-          <div style={{ padding: '20px', textAlign: "center" }} >
+      <div className=" myApp" style={AppStyle}  >
+        <div className="advice-container" style={mystyle} >
+          <div  style={{ padding: ' 0 20px  0 20px', textAlign: "center" }} >
             <p>{advices}</p>
-            {/* <p {...this.state.loading ? true : '<p>loading<p/>' }></p> */}
-          </div>
-          <div>
-            <button onClick={this.fetchAdvice} style={{ marginBottom: '20px' }}>Next</button>
           </div>
         </div>
+            <button className="btn" onClick={this.fetchAdvice} >Next</button>
       </div>
     );
   }
