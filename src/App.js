@@ -4,7 +4,7 @@ import './App.css'
 export default class App extends Component {
   state = {
     advices: '',
-    // loading : true
+    loading : true
   }
   componentDidMount() {
     this.fetchAdvice()
@@ -17,7 +17,7 @@ export default class App extends Component {
         const { advice } = res.data.slip
         console.log(advice)
         this.setState({
-          //  loading : false,
+           loading : false,
           advices: advice
         })
         // console.log(res.data.slip.advice);
@@ -49,7 +49,8 @@ export default class App extends Component {
       <div className=" myApp" style={AppStyle}  >
         <div className="advice-container" style={mystyle} >
           <div  style={{ padding: ' 0 20px  0 20px', textAlign: "center" }} >
-            <p>{advices}</p>
+            {/* <p >{advices}</p> */}
+            <p>{this.state.loading ? <h2>Loading... </h2>: advices} </p>
           </div>
         </div>
             <button className="btn" onClick={this.fetchAdvice} >Next</button>
