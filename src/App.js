@@ -53,7 +53,7 @@ export default class App extends Component {
             <p>{this.state.loading ? <h2>Loading... </h2>: advices} </p>
           </div>
         </div>
-            <button className="btn" onClick={this.fetchAdvice} >Next</button>
+            <button className="btn" onClick={this.fetchAdvice} >Next Button</button>
       </div>
     );
   }
