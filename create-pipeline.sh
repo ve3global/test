@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # *** Change this to the desired name of the Cloudformation stack of 
-# your Pipeline (*not* the stack name of your app)
+# your test (*not* the stack name of your app)
 CODEPIPELINE_STACK_NAME="github-test"
 
 if [ -z ${1} ]
