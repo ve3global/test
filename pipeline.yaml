@@ -49,9 +49,9 @@ Resources:
     Properties:
       ArtifactStore:
         Type: S3
-        Location: !Ref PipelineArtifactsBucket
+        Location: !Ref test ArtifactsBucket
       RestartExecutionOnUpdate: true
-      RoleArn: !GetAtt CodePipelineRole.Arn
+      RoleArn: !GetAtt test Role.Arn
       Stages:
       - Name: Source
         Actions:
@@ -244,9 +244,9 @@ test ServiceRolePolicy:
             - appconfig:StopDeployment
             - appconfig:GetDeployment
             Resource: "*"
-      PolicyName: CodePipelineServiceRolePolicy
+      PolicyName: test ServiceRolePolicy
       Roles: 
-        - !Ref CodePipelineRole
+        - !Ref test Role
 
 
   CloudformationRole:
