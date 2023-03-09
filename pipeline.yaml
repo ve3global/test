@@ -23,7 +23,7 @@ Parameters:
 
   GitHubRepo:
     Type: String
-    Default: github-ve3global/test
+    Default: github-test
     AllowedPattern: "[A-Za-z0-9-]+"
 
   GitHubBranch:
