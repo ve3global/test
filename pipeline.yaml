@@ -28,13 +28,13 @@ Parameters:
 
   GitHubBranch:
     Type: String
-    Default: master
+    Default: main
     AllowedPattern: "[A-Za-z0-9-]+"
 
   # *** The stack name for the actual application we're deploying
   ApplicationStackName:
     Type: String
-    Default: github-test-app
+    Default: github-test
     AllowedPattern: "[A-Za-z0-9-]+"
 
 Resources:
