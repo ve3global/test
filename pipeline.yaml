@@ -60,7 +60,7 @@ Resources:
           ActionTypeId:
             Category: Source
             Owner: ThirdParty
-            Version: 1
+            Version: 2
             Provider: GitHub
           OutputArtifacts:
           - Name: SourceCode
@@ -79,7 +79,7 @@ Resources:
             Category: Deploy
             Owner: AWS
             Provider: CloudFormation
-            Version: '1'
+            Version: '2'
           InputArtifacts:
             - Name: SourceCode
           Configuration:
@@ -132,9 +132,9 @@ test ServiceRolePolicy:
               StringEqualsIfExists:
                 iam:PassedToService:
                 - cloudformation.amazonaws.com
-                - elasticbeanstalk.amazonaws.com
-                - ec2.amazonaws.com
-                - ecs-tasks.amazonaws.com
+#                - elasticbeanstalk.amazonaws.com
+#                - ec2.amazonaws.com
+#                - ecs-tasks.amazonaws.com
           - Action:
             - codecommit:CancelUploadArchive
             - codecommit:GetBranch
@@ -158,22 +158,22 @@ test ServiceRolePolicy:
             Resource: "*"
             Effect: Allow
           - Action:
-            - elasticbeanstalk:*
-            - ec2:*
-            - elasticloadbalancing:*
-            - autoscaling:*
-            - cloudwatch:*
+#            - elasticbeanstalk:*
+#            - ec2:*
+#            - elasticloadbalancing:*
+#            - autoscaling:*
+#            - cloudwatch:*
             - s3:*
-            - sns:*
+#            - sns:*
             - cloudformation:*
-            - rds:*
-            - sqs:*
-            - ecs:*
-            Resource: "*"
-            Effect: Allow
-          - Action:
-            - lambda:InvokeFunction
-            - lambda:ListFunctions
+#            - rds:*
+#           - sqs:*
+#            - ecs:*
+#            Resource: "*"
+#            Effect: Allow
+#          - Action:
+#            - lambda:InvokeFunction
+#            - lambda:ListFunctions
             Resource: "*"
             Effect: Allow
           - Action:
@@ -199,12 +199,12 @@ test ServiceRolePolicy:
             - cloudformation:SetStackPolicy
             - cloudformation:ValidateTemplate
             Resource: "*"
-            Effect: Allow
-          - Action:
-            - codebuild:BatchGetBuilds
-            - codebuild:StartBuild
-            - codebuild:BatchGetBuildBatches
-            - codebuild:StartBuildBatch
+#            Effect: Allow
+#          - Action:
+#            - codebuild:BatchGetBuilds
+#            - codebuild:StartBuild
+#            - codebuild:BatchGetBuildBatches
+#            - codebuild:StartBuildBatch
             Resource: "*"
             Effect: Allow
           - Effect: Allow
@@ -227,10 +227,10 @@ test ServiceRolePolicy:
           - Effect: Allow
             Action:
             - cloudformation:ValidateTemplate
-            Resource: "*"
-          - Effect: Allow
-            Action:
-            - ecr:DescribeImages
+#            Resource: "*"
+#          - Effect: Allow
+#            Action:
+#            - ecr:DescribeImages
             Resource: "*"
           - Effect: Allow
             Action:
