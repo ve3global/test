@@ -132,9 +132,7 @@ test ServiceRolePolicy:
               StringEqualsIfExists:
                 iam:PassedToService:
                 - cloudformation.amazonaws.com
-#                - elasticbeanstalk.amazonaws.com
-#                - ec2.amazonaws.com
-#                - ecs-tasks.amazonaws.com
+
           - Action:
             - codecommit:CancelUploadArchive
             - codecommit:GetBranch
@@ -158,22 +156,13 @@ test ServiceRolePolicy:
             Resource: "*"
             Effect: Allow
           - Action:
-#            - elasticbeanstalk:*
-#            - ec2:*
-#            - elasticloadbalancing:*
-#            - autoscaling:*
-#            - cloudwatch:*
+
+
+
             - s3:*
-#            - sns:*
+
             - cloudformation:*
-#            - rds:*
-#           - sqs:*
-#            - ecs:*
-#            Resource: "*"
-#            Effect: Allow
-#          - Action:
-#            - lambda:InvokeFunction
-#            - lambda:ListFunctions
+
             Resource: "*"
             Effect: Allow
           - Action:
@@ -199,13 +188,7 @@ test ServiceRolePolicy:
             - cloudformation:SetStackPolicy
             - cloudformation:ValidateTemplate
             Resource: "*"
-#            Effect: Allow
-#          - Action:
-#            - codebuild:BatchGetBuilds
-#            - codebuild:StartBuild
-#            - codebuild:BatchGetBuildBatches
-#            - codebuild:StartBuildBatch
-            Resource: "*"
+
             Effect: Allow
           - Effect: Allow
             Action:
@@ -227,10 +210,7 @@ test ServiceRolePolicy:
           - Effect: Allow
             Action:
             - cloudformation:ValidateTemplate
-#            Resource: "*"
-#          - Effect: Allow
-#            Action:
-#            - ecr:DescribeImages
+
             Resource: "*"
           - Effect: Allow
             Action:
